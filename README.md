@@ -31,7 +31,29 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 /* write all the steps invloved */
 
 **PROGRAM**
-
+```
+/*module ex08(D,Clock,Q,Qbar); 
+input D,Clock; 
+output reg Q,Qbar; 
+always @ (negedge Clock)// use negative edge clock for triggereing condition 
+//compute D flipflop logic here 
+begin 
+ Q=D; 
+Qbar=~D; 
+end 
+ endmodule */
+ 
+module ex08(D,C,Q,b); 
+input D,C; 
+output reg Q,b; 
+always @ (negedge C)// use negative edge clock for triggereing condition 
+//compute D flipflop logic here 
+begin 
+ Q=D; 
+b=~D; 
+end 
+ endmodule 
+```
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 
